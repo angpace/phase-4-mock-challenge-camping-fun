@@ -9,7 +9,6 @@ RSpec.describe Activity, type: :model do
 
     it 'can access the associated signups' do
       signup = Signup.create(camper_id: camper.id, activity_id: activity.id, time: 11)
-
       expect(activity.signups).to include(signup)
     end
 
